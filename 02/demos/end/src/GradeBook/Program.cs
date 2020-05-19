@@ -15,6 +15,7 @@ namespace GradeBook
                 Console.WriteLine("Hello!");
             }
             Console.Beep();
+            Console.ReadLine();
         }
     }
 }
