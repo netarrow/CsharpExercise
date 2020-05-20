@@ -27,7 +27,7 @@ namespace GradeBook
                 var linedouble = double.Parse(line);
                 list.Add(linedouble);
             }
-            return list;
+                return list;
         }
     }
 }
