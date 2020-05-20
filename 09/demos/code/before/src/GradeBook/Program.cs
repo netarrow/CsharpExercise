@@ -7,11 +7,11 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {               
-            var book = new Book("Scott's Grade Book");
+            var book = new Book("Scott's Grade Book", new InMemoryRepository());
             book.GradeAdded += OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
-            book.GradeAdded -= OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
+            //book.GradeAdded += OnGradeAdded;
+            //book.GradeAdded -= OnGradeAdded;
+            //book.GradeAdded += OnGradeAdded;
 
             while(true)
             {

@@ -7,11 +7,24 @@ namespace GradeBook
 
     public class Book
     {
-        public Book(string name)
+        public Book(string name, IBookRepository repository = null)
         {            
-            grades = new List<double>();
             Name = name;
+            if (repository == null)
+                repository = new InMemoryRepository();
+            else
+                this.repository = repository;
         }
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        public const string CATEGORY = "Science";
+
+        private IBookRepository repository;
 
         public void AddGrade(char letter)
         {
@@ -40,7 +53,7 @@ namespace GradeBook
         {            
             if(grade <= 100 && grade >= 0)
             {                
-                grades.Add(grade);  
+                repository.AddGrade(grade);  
                 if(GradeAdded != null)
                 {
                     GradeAdded(this, new EventArgs());
@@ -60,6 +73,7 @@ namespace GradeBook
             result.Average = 0.0;            
             result.High = double.MinValue;
             result.Low = double.MaxValue;
+            var grades = repository.GetGrades();
 
             for(var index = 0; index < grades.Count; index += 1)
             {
@@ -99,14 +113,6 @@ namespace GradeBook
             return result;
         }
 
-        private List<double> grades;
-        
-        public string Name
-        {
-            get; 
-            set;            
-        }
 
-        public const string CATEGORY = "Science";
     }
 }
