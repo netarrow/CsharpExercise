@@ -23,7 +23,6 @@ namespace GradeBook
                 {
                     break;
                 }
-
                 try
                 {
                     var grade = double.Parse(input);

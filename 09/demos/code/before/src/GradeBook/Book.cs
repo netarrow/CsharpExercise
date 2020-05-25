@@ -26,7 +26,7 @@ namespace GradeBook
         public const string CATEGORY = "Science";
 
         private IBookRepository repository;
-
+        
         public void AddGrade(char letter)
         {
             switch (letter)
@@ -46,7 +46,6 @@ namespace GradeBook
                 default:
                     AddGrade(0);
                     break;
-
             }
         }
 

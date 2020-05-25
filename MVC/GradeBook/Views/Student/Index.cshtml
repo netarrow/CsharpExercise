@@ -1,0 +1,26 @@
+﻿@model GradeBook.Models.Student
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Model.Name</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Letter</th>
+            <th>Rate</th>
+            <th>Subject</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var grade in Model.Grade)
+        {
+            <tr>
+                <td>@grade.Letter</td>
+                <td>@grade.Rate</td>
+                <td>@grade.Subject</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
