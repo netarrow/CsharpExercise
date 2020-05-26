@@ -16,7 +16,7 @@ namespace GradeBook.Controllers
             if (!id.HasValue)
                 throw new ArgumentNullException("id");
 
-            StudentRepository studentRepository = new StudentRepository();
+            IStudentRepository studentRepository = new InMemoryStudentRepository();
 
             var student = studentRepository.GetStudentById(id.Value);
 
