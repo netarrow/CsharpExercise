@@ -1,4 +1,5 @@
 ﻿using GradeBook.Models;
+using GradeBook.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,21 +13,17 @@ namespace GradeBook.Controllers
         // GET: Student
         public ActionResult Index(int? id)
         {
-            var student = new Student();
-            student.Id = 1;
-            if (student.Id == id)
+            if (!id.HasValue)
+                throw new ArgumentNullException("id");
+
+            StudentRepository studentRepository = new StudentRepository();
+
+            var student = studentRepository.GetStudentById(id.Value);
+
+            if (student == null)
             {
-                student.Name = "Marco";
-                student.Grade.Add(new Grade() { Letter = "A", Rate = 95, Subject = "Hystory" });
-                student.Grade.Add(new Grade() { Letter = "B", Rate = 80, Subject = "Math" });
-                ViewBag.IsError = false;
+                ModelState.AddModelError("invalid parameter", "Nessuno studente trovato per questo id");
             }
-            else
-            {
-                ViewBag.Message = "Nessuno studente trovato per questo id";
-                ViewBag.IsError = true;
-            }
-            
             
             return View(student);
 

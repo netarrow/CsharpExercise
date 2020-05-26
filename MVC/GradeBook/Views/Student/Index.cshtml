@@ -2,7 +2,11 @@
 @{
     ViewBag.Title = "Index";
 }
-@if (!ViewBag.IsError)
+@if (!ViewData.ModelState.IsValid)
+{
+    @Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
+}
+else
 {
     <h2>@Model.Name</h2>
     <table class="table table-striped">
@@ -24,8 +28,4 @@
             }
         </tbody>
     </table>
-}
-else
-{
-    <h1>@ViewBag.Message</h1>
 }
