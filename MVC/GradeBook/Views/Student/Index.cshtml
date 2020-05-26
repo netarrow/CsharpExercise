@@ -2,25 +2,30 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>@Model.Name</h2>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Letter</th>
-            <th>Rate</th>
-            <th>Subject</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var grade in Model.Grade)
-        {
+@if (!ViewBag.IsError)
+{
+    <h2>@Model.Name</h2>
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>@grade.Letter</td>
-                <td>@grade.Rate</td>
-                <td>@grade.Subject</td>
+                <th>Letter</th>
+                <th>Rate</th>
+                <th>Subject</th>
             </tr>
-        }
-    </tbody>
-</table>
-
+        </thead>
+        <tbody>
+            @foreach (var grade in Model.Grade)
+            {
+                <tr>
+                    <td>@grade.Letter</td>
+                    <td>@grade.Rate</td>
+                    <td>@grade.Subject</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1>@ViewBag.Message</h1>
+}

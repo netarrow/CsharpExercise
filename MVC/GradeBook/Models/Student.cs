@@ -13,5 +13,6 @@ namespace GradeBook.Models
         {
             Grade = new List<Grade>();
         }
+        public int Id { get; set; }
     }
 }
