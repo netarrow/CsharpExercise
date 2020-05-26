@@ -1,4 +1,5 @@
 ﻿using GradeBook.Models;
+using GradeBook.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,11 @@ namespace GradeBook.Controllers
         // GET: Classroom
         public ActionResult Index()
         {
-            List<Student> students = new List<Student>();
-            students.Add(new Student() { Name = "Mario" });
-            students.Add(new Student() { Name = "Giacomo" });
-            students.Add(new Student() { Name = "Franco" });
+            StudentRepository studentRepository = new StudentRepository();
+
             Classroom classroom = new Classroom();
-            classroom.Students = students;
+            classroom.Students = studentRepository.GetAllStudents();
+
             return View(classroom);
         }
     }

@@ -29,7 +29,8 @@ namespace GradeBook.Repository
 
         public List<Student> GetAllStudents()
         {
-            throw new NotImplementedException();
+            List<Student> studentsLookUp = students.Select(item => new Student() { Name = item.Name, Id = item.Id, Grade = null }).ToList();
+            return studentsLookUp;
         }
 
         public Student GetStudentById (int id)
