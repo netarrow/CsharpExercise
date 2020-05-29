@@ -151,7 +151,6 @@ C:\Git\CsharpExercise\MVC\GradeBook\bin\System.Web.WebPages.Razor.xml
 C:\Git\CsharpExercise\MVC\GradeBook\bin\Newtonsoft.Json.xml
 C:\Git\CsharpExercise\MVC\GradeBook\bin\Antlr3.Runtime.pdb
 C:\Git\CsharpExercise\MVC\GradeBook\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.csprojAssemblyReference.cache
 C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.csproj.CoreCompileInputs.cache
 C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.csproj.CopyComplete
 C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.dll

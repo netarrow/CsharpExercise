@@ -45,7 +45,11 @@ namespace GradeBook.Controllers
         [HttpPost]
         public ActionResult AddGrade(Grade grade)
         {
-            return null;
+            IStudentRepository studentRepository = new InMemoryStudentRepository();
+            studentRepository.AddGradeToStudent(grade);
+            
+            return RedirectToAction("Index", "Student", new {id = grade.StudentId });
         }
+
     }
 }

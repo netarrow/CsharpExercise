@@ -8,16 +8,18 @@ namespace GradeBook.Repository
 {
     public class InMemoryStudentRepository : IStudentRepository
     {
-        private List<Student> students;
+        private static List<Student> students;
         public InMemoryStudentRepository()
         {
-            students = new List<Student>();
-            students.Add(CreateStudent("Marco", 1, new List<Grade>() { new Grade() { Rate = 90, Subject = "Math" } }));
-            students.Add(CreateStudent("Mirco", 2, new List<Grade>() { new Grade() { Rate = 80, Subject = "Math" } }));
-            students.Add(CreateStudent("Matteo", 3, new List<Grade>() { new Grade() { Rate = 85, Subject = "Math" } }));
-            students.Add(CreateStudent("Giacomo", 4, new List<Grade>() { new Grade() { Rate = 76, Subject = "Math" } }));
-            students.Add(CreateStudent("Lorenzo", 5, new List<Grade>() { new Grade() { Rate = 98, Subject = "Math" } }));
-
+            if (students == null)
+            {
+                students = new List<Student>();
+                students.Add(CreateStudent("Marco", 1, new List<Grade>() { new Grade() { Rate = 90, Subject = "Math" } }));
+                students.Add(CreateStudent("Mirco", 2, new List<Grade>() { new Grade() { Rate = 80, Subject = "Math" } }));
+                students.Add(CreateStudent("Matteo", 3, new List<Grade>() { new Grade() { Rate = 85, Subject = "Math" } }));
+                students.Add(CreateStudent("Giacomo", 4, new List<Grade>() { new Grade() { Rate = 76, Subject = "Math" } }));
+                students.Add(CreateStudent("Lorenzo", 5, new List<Grade>() { new Grade() { Rate = 98, Subject = "Math" } }));
+            }
 
         }
 
@@ -37,6 +39,12 @@ namespace GradeBook.Repository
         {
             Student studentFound = students.Where(item => item.Id == id).SingleOrDefault();
             return studentFound;
+        }
+
+        public void AddGradeToStudent(Grade grade)
+        {
+            var student = students.Where(item => item.Id == grade.StudentId).SingleOrDefault();
+            student.Grade.Add(grade);
         }
     }
 }

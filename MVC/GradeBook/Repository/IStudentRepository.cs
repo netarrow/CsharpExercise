@@ -7,5 +7,6 @@ namespace GradeBook.Repository
     {
         List<Student> GetAllStudents();
         Student GetStudentById(int id);
+        void AddGradeToStudent(Grade grade);
     }
 }
