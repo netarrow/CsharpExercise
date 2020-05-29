@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -7,6 +8,7 @@ namespace GradeBook.Models
 {
     public class Grade
     {
+        [DisplayName("Inserire voto numerico")]
         public double Rate { get; set; }
         public string Letter
         {
@@ -23,6 +25,9 @@ namespace GradeBook.Models
 
             }
         }
+        [DisplayName("Inserire una materia")]
         public string Subject { get; set; }
+        public int StudentId { get; set; }
+        public string StudentName { get; set; }
     }
 }

@@ -28,5 +28,24 @@ namespace GradeBook.Controllers
             return View(student);
 
         }
+
+        public ActionResult AddGrade(int? id)
+        {
+            if (!id.HasValue)
+                throw new ArgumentNullException("id");
+
+            Grade grade = new Grade();
+            grade.StudentId = id.Value;
+            IStudentRepository studentRepository = new InMemoryStudentRepository();
+            var student = studentRepository.GetStudentById(id.Value);
+            grade.StudentName = student.Name;
+
+            return View(grade);
+        }
+        [HttpPost]
+        public ActionResult AddGrade(Grade grade)
+        {
+            return null;
+        }
     }
 }
