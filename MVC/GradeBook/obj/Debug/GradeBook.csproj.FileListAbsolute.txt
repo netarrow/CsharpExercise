@@ -155,3 +155,4 @@ C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.csproj.CoreCompileInputs
 C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.csproj.CopyComplete
 C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.dll
 C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.pdb
+C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.csprojAssemblyReference.cache

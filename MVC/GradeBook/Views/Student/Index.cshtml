@@ -8,6 +8,12 @@
 }
 else
 {
+    <script>
+        function goToAddGrade()
+        {
+            location.href = "/Student/AddGrade/@Model.Id";
+        }
+    </script>
     <h2>@Model.Name</h2>
     <table class="table table-striped">
         <thead>
@@ -27,5 +33,12 @@ else
                 </tr>
             }
         </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <button type="button" onclick="goToAddGrade()">Add Grade</button>
+                </td>
+            </tr>
+        </tfoot>
     </table>
 }
