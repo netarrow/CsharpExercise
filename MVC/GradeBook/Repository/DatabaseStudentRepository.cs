@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Student = GradeBook.Models.Student;
+using Grade = GradeBook.Models.Grade;
 
 namespace GradeBook.Repository
 {
@@ -12,7 +13,12 @@ namespace GradeBook.Repository
     {
         public void AddGradeToStudent(Grade grade)
         {
-            throw new NotImplementedException();
+            using (GradeBookDBEntities ctx = new GradeBookDBEntities())
+            {
+                var efGrade = new DataBase.Grade { Rate = grade.Rate, Subject = grade.Subject, StudentId = grade.StudentId };
+                ctx.Grades.Add(efGrade);
+                ctx.SaveChanges();
+            }
         }
 
         public List<Student> GetAllStudents()

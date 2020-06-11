@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a4d1ccfba0b84499b532ffa376e8d27d" Name="Diagram1">
-        <EntityTypeShape EntityType="GradeBookDBModel.Grades" Width="1.5" PointX="3.125" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GradeBookDBModel.Grade" Width="1.5" PointX="3.125" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="GradeBookDBModel.Student" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="GradeBookDBModel.FK_Grades_ToStudents" ManuallyRouted="false" />
       </Diagram>

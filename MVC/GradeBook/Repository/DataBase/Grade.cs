@@ -12,7 +12,7 @@ namespace GradeBook.Repository.DataBase
     using System;
     using System.Collections.Generic;
     
-    public partial class Grades
+    public partial class Grade
     {
         public int Id { get; set; }
         public double Rate { get; set; }

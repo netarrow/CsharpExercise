@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="GradeBookDBModelStoreContainer" CdmEntityContainer="GradeBookDBEntities">
     <EntitySetMapping Name="Grades">
-      <EntityTypeMapping TypeName="GradeBookDBModel.Grades">
+      <EntityTypeMapping TypeName="GradeBookDBModel.Grade">
         <MappingFragment StoreEntitySet="Grades">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Rate" ColumnName="Rate" />

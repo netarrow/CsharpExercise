@@ -25,7 +25,7 @@ namespace GradeBook.Repository.DataBase
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Grades> Grades { get; set; }
+        public DbSet<Grade> Grades { get; set; }
         public DbSet<Student> Students { get; set; }
     }
 }

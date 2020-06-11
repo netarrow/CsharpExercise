@@ -45,7 +45,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GradeBookDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Grades">
+        <EntityType Name="Grade">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -65,7 +65,7 @@
         </EntityType>
         <Association Name="FK_Grades_ToStudents">
           <End Role="Students" Type="GradeBookDBModel.Student" Multiplicity="1" />
-          <End Role="Grades" Type="Self.Grades" Multiplicity="*" />
+          <End Role="Grades" Type="GradeBookDBModel.Grade" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Students">
               <PropertyRef Name="Id" />
@@ -76,7 +76,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="GradeBookDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Grades" EntityType="Self.Grades" />
+          <EntitySet Name="Grades" EntityType="GradeBookDBModel.Grade" />
           <EntitySet Name="Students" EntityType="GradeBookDBModel.Student" />
           <AssociationSet Name="FK_Grades_ToStudents" Association="Self.FK_Grades_ToStudents">
             <End Role="Students" EntitySet="Students" />
@@ -90,7 +90,7 @@
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="GradeBookDBModelStoreContainer" CdmEntityContainer="GradeBookDBEntities">
           <EntitySetMapping Name="Grades">
-            <EntityTypeMapping TypeName="GradeBookDBModel.Grades">
+            <EntityTypeMapping TypeName="GradeBookDBModel.Grade">
               <MappingFragment StoreEntitySet="Grades">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Rate" ColumnName="Rate" />

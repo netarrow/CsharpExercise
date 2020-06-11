@@ -16,12 +16,12 @@ namespace GradeBook.Repository.DataBase
     {
         public Student()
         {
-            this.Grades = new HashSet<Grades>();
+            this.Grades = new HashSet<Grade>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
     
-        public virtual ICollection<Grades> Grades { get; set; }
+        public virtual ICollection<Grade> Grades { get; set; }
     }
 }
