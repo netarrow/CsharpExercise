@@ -4,3 +4,7 @@ C:\Git\CsharpExercise\MVC\GradeBookDB\bin\Debug\GradeBookDB.pdb
 C:\Git\CsharpExercise\MVC\GradeBookDB\obj\Debug\GradeBookDB.sqlprojAssemblyReference.cache
 C:\Git\CsharpExercise\MVC\GradeBookDB\obj\Debug\GradeBookDB.dll
 C:\Git\CsharpExercise\MVC\GradeBookDB\obj\Debug\GradeBookDB.pdb
+C:\Git\CsharpExercise\MVC\GradeBookDB\obj\Debug\Model.xml
+C:\Git\CsharpExercise\MVC\GradeBookDB\obj\Debug\refactor.xml
+C:\Git\CsharpExercise\MVC\GradeBookDB\obj\Debug\postdeploy.sql
+C:\Git\CsharpExercise\MVC\GradeBookDB\obj\Debug\predeploy.sql

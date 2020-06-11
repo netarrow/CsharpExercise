@@ -16,7 +16,7 @@ namespace GradeBook.Controllers
             if (!id.HasValue)
                 throw new ArgumentNullException("id");
 
-            IStudentRepository studentRepository = new InMemoryStudentRepository();
+            IStudentRepository studentRepository = new DatabaseStudentRepository();
 
             var student = studentRepository.GetStudentById(id.Value);
 
@@ -36,7 +36,7 @@ namespace GradeBook.Controllers
 
             Grade grade = new Grade();
             grade.StudentId = id.Value;
-            IStudentRepository studentRepository = new InMemoryStudentRepository();
+            IStudentRepository studentRepository = new DatabaseStudentRepository();
             var student = studentRepository.GetStudentById(id.Value);
             grade.StudentName = student.Name;
 
@@ -45,7 +45,7 @@ namespace GradeBook.Controllers
         [HttpPost]
         public ActionResult AddGrade(Grade grade)
         {
-            IStudentRepository studentRepository = new InMemoryStudentRepository();
+            IStudentRepository studentRepository = new DatabaseStudentRepository();
             studentRepository.AddGradeToStudent(grade);
             
             return RedirectToAction("Index", "Student", new {id = grade.StudentId });

@@ -15,7 +15,7 @@ namespace GradeBook.Controllers
         // GET: Classroom
         public ActionResult Index()
         {
-            IStudentRepository studentRepository = new InMemoryStudentRepository();
+            IStudentRepository studentRepository = new DatabaseStudentRepository();
             Classroom classroom = new Classroom();
             classroom.Students = studentRepository.GetAllStudents();
             return View(classroom);
