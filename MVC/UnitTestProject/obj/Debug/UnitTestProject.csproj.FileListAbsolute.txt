@@ -36,3 +36,6 @@ C:\Git\CsharpExercise\MVC\UnitTestProject\obj\Debug\UnitTestProject.csproj.CoreC
 C:\Git\CsharpExercise\MVC\UnitTestProject\obj\Debug\UnitTestProject.csproj.CopyComplete
 C:\Git\CsharpExercise\MVC\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Git\CsharpExercise\MVC\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Git\CsharpExercise\MVC\UnitTestProject\bin\Debug\AutoMapper.dll
+C:\Git\CsharpExercise\MVC\UnitTestProject\bin\Debug\AutoMapper.pdb
+C:\Git\CsharpExercise\MVC\UnitTestProject\bin\Debug\AutoMapper.xml

@@ -158,3 +158,6 @@ C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.pdb
 C:\Git\CsharpExercise\MVC\GradeBook\obj\Debug\GradeBook.csprojAssemblyReference.cache
 C:\Git\CsharpExercise\MVC\GradeBook\bin\EntityFramework.dll
 C:\Git\CsharpExercise\MVC\GradeBook\bin\EntityFramework.xml
+C:\Git\CsharpExercise\MVC\GradeBook\bin\AutoMapper.dll
+C:\Git\CsharpExercise\MVC\GradeBook\bin\AutoMapper.pdb
+C:\Git\CsharpExercise\MVC\GradeBook\bin\AutoMapper.xml
